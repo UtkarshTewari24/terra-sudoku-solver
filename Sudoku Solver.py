@@ -1,6 +1,9 @@
-#v3 gonna crash out
+#v4
+# hopefully algo works now, then i can start working on smth new. been tuning this last 2 days...             
+
 X = 0
 
+       
 r1 = X
 r2 = X
 r3 = X
@@ -11,6 +14,7 @@ r7 = 9
 r8 = X
 r9 = 7
 
+       
 r10 = X
 r11 = X
 r12 = X
@@ -21,6 +25,7 @@ r16 = 1
 r17 = 8
 r18 = X
 
+       
 r19 = X
 r20 = X
 r21 = X
@@ -31,6 +36,7 @@ r25 = X
 r26 = 2
 r27 = 6
 
+       
 r28 = 1
 r29 = X
 r30 = X
@@ -41,6 +47,7 @@ r34 = X
 r35 = X
 r36 = X
 
+       
 r37 = X
 r38 = 5
 r39 = X
@@ -51,6 +58,7 @@ r43 = X
 r44 = 4
 r45 = X
 
+       
 r46 = X
 r47 = X
 r48 = X
@@ -61,6 +69,7 @@ r52 = X
 r53 = X
 r54 = 9
 
+       
 r55 = 9
 r56 = 2
 r57 = X
@@ -71,6 +80,7 @@ r61 = X
 r62 = X
 r63 = X
 
+       
 r64 = X
 r65 = 3
 r66 = 4
@@ -81,6 +91,7 @@ r70 = X
 r71 = X
 r72 = X
 
+       
 r73 = 5
 r74 = X
 r75 = 7
@@ -90,237 +101,297 @@ r78 = X
 r79 = X
 r80 = X
 r81 = X
-#ouu shii first function (lowk needed this) uh um hope this works idk i had this in my logic diagram hardcoded but its so much easier to just learn functions instead
-def cands(used):
-    out = []
-    for n in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
-        if n not in used:
-            out.append(n)
-    return out
 
-if r1 == X:
-    c = cands([r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r19, r20, r21, r28, r37, r46, r55, r64, r73])
-    if len(c) == 1:
-        r1 = c[0]
-if r2 == X:
-    c = cands([r1, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r19, r20, r21, r29, r38, r47, r56, r65, r74])
-    if len(c) == 1:
-        r2 = c[0]
-if r3 == X:
-    c = cands([r1, r2, r4, r5, r6, r7, r8, r9, r10, r11, r12, r19, r20, r21, r30, r39, r48, r57, r66, r75])
-    if len(c) == 1:
-        r3 = c[0]
-if r4 == X:
-    c = cands([r1, r2, r3, r5, r6, r7, r8, r9, r13, r14, r15, r22, r23, r24, r31, r40, r49, r58, r67, r76])
-    if len(c) == 1:
-        r4 = c[0]
-if r5 == X:
-    c = cands([r1, r2, r3, r4, r6, r7, r8, r9, r13, r14, r15, r22, r23, r24, r32, r41, r50, r59, r68, r77])
-    if len(c) == 1:
-        r5 = c[0]
-if r6 == X:
-    c = cands([r1, r2, r3, r4, r5, r7, r8, r9, r13, r14, r15, r22, r23, r24, r33, r42, r51, r60, r69, r78])
-    if len(c) == 1:
-        r6 = c[0]
-if r8 == X:
-    c = cands([r1, r2, r3, r4, r5, r6, r7, r9, r16, r17, r18, r25, r26, r27, r35, r44, r53, r62, r71, r80])
-    if len(c) == 1:
-        r8 = c[0]
-if r10 == X:
-    c = cands([r1, r2, r3, r11, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r28, r37, r46, r55, r64, r73])
-    if len(c) == 1:
-        r10 = c[0]
-if r11 == X:
-    c = cands([r1, r2, r3, r10, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r29, r38, r47, r56, r65, r74])
-    if len(c) == 1:
-        r11 = c[0]
-if r12 == X:
-    c = cands([r1, r2, r3, r10, r11, r13, r14, r15, r16, r17, r18, r19, r20, r21, r30, r39, r48, r57, r66, r75])
-    if len(c) == 1:
-        r12 = c[0]
-if r15 == X:
-    c = cands([r4, r5, r6, r10, r11, r12, r13, r14, r16, r17, r18, r22, r23, r24, r33, r42, r51, r60, r69, r78])
-    if len(c) == 1:
-        r15 = c[0]
-if r18 == X:
-    c = cands([r7, r8, r9, r10, r11, r12, r13, r14, r15, r16, r17, r25, r26, r27, r36, r45, r54, r63, r72, r81])
-    if len(c) == 1:
-        r18 = c[0]
-if r19 == X:
-    c = cands([r1, r2, r3, r10, r11, r12, r20, r21, r22, r23, r24, r25, r26, r27, r28, r37, r46, r55, r64, r73])
-    if len(c) == 1:
-        r19 = c[0]
-if r20 == X:
-    c = cands([r1, r2, r3, r10, r11, r12, r19, r21, r22, r23, r24, r25, r26, r27, r29, r38, r47, r56, r65, r74])
-    if len(c) == 1:
-        r20 = c[0]
-if r21 == X:
-    c = cands([r1, r2, r3, r10, r11, r12, r19, r20, r22, r23, r24, r25, r26, r27, r30, r39, r48, r57, r66, r75])
-    if len(c) == 1:
-        r21 = c[0]
-if r23 == X:
-    c = cands([r4, r5, r6, r13, r14, r15, r19, r20, r21, r22, r24, r25, r26, r27, r32, r41, r50, r59, r68, r77])
-    if len(c) == 1:
-        r23 = c[0]
-if r25 == X:
-    c = cands([r7, r8, r9, r16, r17, r18, r19, r20, r21, r22, r23, r24, r26, r27, r34, r43, r52, r61, r70, r79])
-    if len(c) == 1:
-        r25 = c[0]
-if r29 == X:
-    c = cands([r2, r11, r20, r28, r30, r31, r32, r33, r34, r35, r36, r37, r38, r39, r46, r47, r48, r56, r65, r74])
-    if len(c) == 1:
-        r29 = c[0]
-if r30 == X:
-    c = cands([r3, r12, r21, r28, r29, r31, r32, r33, r34, r35, r36, r37, r38, r39, r46, r47, r48, r57, r66, r75])
-    if len(c) == 1:
-        r30 = c[0]
-if r32 == X:
-    c = cands([r5, r14, r23, r28, r29, r30, r31, r33, r34, r35, r36, r40, r41, r42, r49, r50, r51, r59, r68, r77])
-    if len(c) == 1:
-        r32 = c[0]
-if r34 == X:
-    c = cands([r7, r16, r25, r28, r29, r30, r31, r32, r33, r35, r36, r43, r44, r45, r52, r53, r54, r61, r70, r79])
-    if len(c) == 1:
-        r34 = c[0]
-if r35 == X:
-    c = cands([r8, r17, r26, r28, r29, r30, r31, r32, r33, r34, r36, r43, r44, r45, r52, r53, r54, r62, r71, r80])
-    if len(c) == 1:
-        r35 = c[0]
-if r36 == X:
-    c = cands([r9, r18, r27, r28, r29, r30, r31, r32, r33, r34, r35, r43, r44, r45, r52, r53, r54, r63, r72, r81])
-    if len(c) == 1:
-        r36 = c[0]
-if r37 == X:
-    c = cands([r1, r10, r19, r28, r29, r30, r38, r39, r40, r41, r42, r43, r44, r45, r46, r47, r48, r55, r64, r73])
-    if len(c) == 1:
-        r37 = c[0]
-if r39 == X:
-    c = cands([r3, r12, r21, r28, r29, r30, r37, r38, r40, r41, r42, r43, r44, r45, r46, r47, r48, r57, r66, r75])
-    if len(c) == 1:
-        r39 = c[0]
-if r40 == X:
-    c = cands([r4, r13, r22, r31, r32, r33, r37, r38, r39, r41, r42, r43, r44, r45, r49, r50, r51, r58, r67, r76])
-    if len(c) == 1:
-        r40 = c[0]
-if r41 == X:
-    c = cands([r5, r14, r23, r31, r32, r33, r37, r38, r39, r40, r42, r43, r44, r45, r49, r50, r51, r59, r68, r77])
-    if len(c) == 1:
-        r41 = c[0]
-if r42 == X:
-    c = cands([r6, r15, r24, r31, r32, r33, r37, r38, r39, r40, r41, r43, r44, r45, r49, r50, r51, r60, r69, r78])
-    if len(c) == 1:
-        r42 = c[0]
-if r43 == X:
-    c = cands([r7, r16, r25, r34, r35, r36, r37, r38, r39, r40, r41, r42, r44, r45, r52, r53, r54, r61, r70, r79])
-    if len(c) == 1:
-        r43 = c[0]
-if r45 == X:
-    c = cands([r9, r18, r27, r34, r35, r36, r37, r38, r39, r40, r41, r42, r43, r44, r52, r53, r54, r63, r72, r81])
-    if len(c) == 1:
-        r45 = c[0]
-if r46 == X:
-    c = cands([r1, r10, r19, r28, r29, r30, r37, r38, r39, r47, r48, r49, r50, r51, r52, r53, r54, r55, r64, r73])
-    if len(c) == 1:
-        r46 = c[0]
-if r47 == X:
-    c = cands([r2, r11, r20, r28, r29, r30, r37, r38, r39, r46, r48, r49, r50, r51, r52, r53, r54, r56, r65, r74])
-    if len(c) == 1:
-        r47 = c[0]
-if r48 == X:
-    c = cands([r3, r12, r21, r28, r29, r30, r37, r38, r39, r46, r47, r49, r50, r51, r52, r53, r54, r57, r66, r75])
-    if len(c) == 1:
-        r48 = c[0]
-if r50 == X:
-    c = cands([r5, r14, r23, r31, r32, r33, r40, r41, r42, r46, r47, r48, r49, r51, r52, r53, r54, r59, r68, r77])
-    if len(c) == 1:
-        r50 = c[0]
-if r52 == X:
-    c = cands([r7, r16, r25, r34, r35, r36, r43, r44, r45, r46, r47, r48, r49, r50, r51, r53, r54, r61, r70, r79])
-    if len(c) == 1:
-        r52 = c[0]
-if r53 == X:
-    c = cands([r8, r17, r26, r34, r35, r36, r43, r44, r45, r46, r47, r48, r49, r50, r51, r52, r54, r62, r71, r80])
-    if len(c) == 1:
-        r53 = c[0]
-if r57 == X:
-    c = cands([r3, r12, r21, r30, r39, r48, r55, r56, r58, r59, r60, r61, r62, r63, r64, r65, r66, r73, r74, r75])
-    if len(c) == 1:
-        r57 = c[0]
-if r59 == X:
-    c = cands([r5, r14, r23, r32, r41, r50, r55, r56, r57, r58, r60, r61, r62, r63, r67, r68, r69, r76, r77, r78])
-    if len(c) == 1:
-        r59 = c[0]
-if r61 == X:
-    c = cands([r7, r16, r25, r34, r43, r52, r55, r56, r57, r58, r59, r60, r62, r63, r70, r71, r72, r79, r80, r81])
-    if len(c) == 1:
-        r61 = c[0]
-if r62 == X:
-    c = cands([r8, r17, r26, r35, r44, r53, r55, r56, r57, r58, r59, r60, r61, r63, r70, r71, r72, r79, r80, r81])
-    if len(c) == 1:
-        r62 = c[0]
-if r63 == X:
-    c = cands([r9, r18, r27, r36, r45, r54, r55, r56, r57, r58, r59, r60, r61, r62, r70, r71, r72, r79, r80, r81])
-    if len(c) == 1:
-        r63 = c[0]
-if r64 == X:
-    c = cands([r1, r10, r19, r28, r37, r46, r55, r56, r57, r65, r66, r67, r68, r69, r70, r71, r72, r73, r74, r75])
-    if len(c) == 1:
-        r64 = c[0]
-if r67 == X:
-    c = cands([r4, r13, r22, r31, r40, r49, r58, r59, r60, r64, r65, r66, r68, r69, r70, r71, r72, r76, r77, r78])
-    if len(c) == 1:
-        r67 = c[0]
-if r70 == X:
-    c = cands([r7, r16, r25, r34, r43, r52, r61, r62, r63, r64, r65, r66, r67, r68, r69, r71, r72, r79, r80, r81])
-    if len(c) == 1:
-        r70 = c[0]
-if r71 == X:
-    c = cands([r8, r17, r26, r35, r44, r53, r61, r62, r63, r64, r65, r66, r67, r68, r69, r70, r72, r79, r80, r81])
-    if len(c) == 1:
-        r71 = c[0]
-if r72 == X:
-    c = cands([r9, r18, r27, r36, r45, r54, r61, r62, r63, r64, r65, r66, r67, r68, r69, r70, r71, r79, r80, r81])
-    if len(c) == 1:
-        r72 = c[0]
-if r74 == X:
-    c = cands([r2, r11, r20, r29, r38, r47, r55, r56, r57, r64, r65, r66, r73, r75, r76, r77, r78, r79, r80, r81])
-    if len(c) == 1:
-        r74 = c[0]
-if r76 == X:
-    c = cands([r4, r13, r22, r31, r40, r49, r58, r59, r60, r67, r68, r69, r73, r74, r75, r77, r78, r79, r80, r81])
-    if len(c) == 1:
-        r76 = c[0]
-if r77 == X:
-    c = cands([r5, r14, r23, r32, r41, r50, r58, r59, r60, r67, r68, r69, r73, r74, r75, r76, r78, r79, r80, r81])
-    if len(c) == 1:
-        r77 = c[0]
-if r78 == X:
-    c = cands([r6, r15, r24, r33, r42, r51, r58, r59, r60, r67, r68, r69, r73, r74, r75, r76, r77, r79, r80, r81])
-    if len(c) == 1:
-        r78 = c[0]
-if r79 == X:
-    c = cands([r7, r16, r25, r34, r43, r52, r61, r62, r63, r70, r71, r72, r73, r74, r75, r76, r77, r78, r80, r81])
-    if len(c) == 1:
-        r79 = c[0]
-if r80 == X:
-    c = cands([r8, r17, r26, r35, r44, r53, r61, r62, r63, r70, r71, r72, r73, r74, r75, r76, r77, r78, r79, r81])
-    if len(c) == 1:
-        r80 = c[0]
-if r81 == X:
-    c = cands([r9, r18, r27, r36, r45, r54, r61, r62, r63, r70, r71, r72, r73, r74, r75, r76, r77, r78, r79, r80])
-    if len(c) == 1:
-        r81 = c[0]
-#finger bleeding rn
-row1 = str(r1) + str(r2) + str(r3) + str(r4) + str(r5) + str(r6) + str(r7) + str(r8) + str(r9)
-row2 = str(r10) + str(r11) + str(r12) + str(r13) + str(r14) + str(r15) + str(r16) + str(r17) + str(r18)
-row3 = str(r19) + str(r20) + str(r21) + str(r22) + str(r23) + str(r24) + str(r25) + str(r26) + str(r27)
-row4 = str(r28) + str(r29) + str(r30) + str(r31) + str(r32) + str(r33) + str(r34) + str(r35) + str(r36)
-row5 = str(r37) + str(r38) + str(r39) + str(r40) + str(r41) + str(r42) + str(r43) + str(r44) + str(r45)
-row6 = str(r46) + str(r47) + str(r48) + str(r49) + str(r50) + str(r51) + str(r52) + str(r53) + str(r54)
-row7 = str(r55) + str(r56) + str(r57) + str(r58) + str(r59) + str(r60) + str(r61) + str(r62) + str(r63)
-row8 = str(r64) + str(r65) + str(r66) + str(r67) + str(r68) + str(r69) + str(r70) + str(r71) + str(r72)
-row9 = str(r73) + str(r74) + str(r75) + str(r76) + str(r77) + str(r78) + str(r79) + str(r80) + str(r81)
-#finger bled more
-print(row1 + " " + row2 + " " + row3 + " " + row4 + " " + row5 + " " + row6 + " " + row7 + " " + row8 + " " + row9)
+board = [
+    r1, r2, r3, r4, r5, r6, r7, r8, r9,
+    r10, r11, r12, r13, r14, r15, r16, r17, r18,
+    r19, r20, r21, r22, r23, r24, r25, r26, r27,
+    r28, r29, r30, r31, r32, r33, r34, r35, r36,
+    r37, r38, r39, r40, r41, r42, r43, r44, r45,
+    r46, r47, r48, r49, r50, r51, r52, r53, r54,
+    r55, r56, r57, r58, r59, r60, r61, r62, r63,
+    r64, r65, r66, r67, r68, r69, r70, r71, r72,
+    r73, r74, r75, r76, r77, r78, r79, r80, r81,
+]
 
-#note in post: WHY DOESNT THIS WORK I DONT UNDERSTAND I THINK I DID IT RIGHT BUT IT DOESNT WORK
+given = []
+for i in range(81):
+    if board[i] == 0:
+        given.append(0)
+    else:
+        given.append(1)
+
+def check_everything(b):
+                                                    
+
+           
+    g = [b[0], b[1], b[2], b[3], b[4], b[5], b[6], b[7], b[8]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+           
+    g = [b[9], b[10], b[11], b[12], b[13], b[14], b[15], b[16], b[17]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+           
+    g = [b[18], b[19], b[20], b[21], b[22], b[23], b[24], b[25], b[26]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+           
+    g = [b[27], b[28], b[29], b[30], b[31], b[32], b[33], b[34], b[35]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+           
+    g = [b[36], b[37], b[38], b[39], b[40], b[41], b[42], b[43], b[44]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+           
+    g = [b[45], b[46], b[47], b[48], b[49], b[50], b[51], b[52], b[53]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+           
+    g = [b[54], b[55], b[56], b[57], b[58], b[59], b[60], b[61], b[62]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+           
+    g = [b[63], b[64], b[65], b[66], b[67], b[68], b[69], b[70], b[71]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+           
+    g = [b[72], b[73], b[74], b[75], b[76], b[77], b[78], b[79], b[80]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[0], b[9], b[18], b[27], b[36], b[45], b[54], b[63], b[72]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[1], b[10], b[19], b[28], b[37], b[46], b[55], b[64], b[73]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[2], b[11], b[20], b[29], b[38], b[47], b[56], b[65], b[74]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[3], b[12], b[21], b[30], b[39], b[48], b[57], b[66], b[75]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[4], b[13], b[22], b[31], b[40], b[49], b[58], b[67], b[76]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[5], b[14], b[23], b[32], b[41], b[50], b[59], b[68], b[77]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[6], b[15], b[24], b[33], b[42], b[51], b[60], b[69], b[78]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[7], b[16], b[25], b[34], b[43], b[52], b[61], b[70], b[79]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[8], b[17], b[26], b[35], b[44], b[53], b[62], b[71], b[80]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[0], b[1], b[2], b[9], b[10], b[11], b[18], b[19], b[20]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[3], b[4], b[5], b[12], b[13], b[14], b[21], b[22], b[23]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[6], b[7], b[8], b[15], b[16], b[17], b[24], b[25], b[26]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[27], b[28], b[29], b[36], b[37], b[38], b[45], b[46], b[47]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[30], b[31], b[32], b[39], b[40], b[41], b[48], b[49], b[50]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[33], b[34], b[35], b[42], b[43], b[44], b[51], b[52], b[53]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[54], b[55], b[56], b[63], b[64], b[65], b[72], b[73], b[74]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[57], b[58], b[59], b[66], b[67], b[68], b[75], b[76], b[77]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    g = [b[60], b[61], b[62], b[69], b[70], b[71], b[78], b[79], b[80]]
+    for i in range(9):
+        for j in range(9):
+            if i != j:
+                if g[i] != 0:
+                    if g[i] == g[j]:
+                        return False
+
+    return True
+
+                         
+pos = 0
+going_back = False
+steps = 0
+
+while pos >= 0 and pos < 81:
+    steps = steps + 1
+                              
+    if given[pos] == 1:
+        if going_back == True:
+            pos = pos - 1
+        else:
+            pos = pos + 1
+        continue
+    going_back = False
+    board[pos] = board[pos] + 1
+    if board[pos] > 9:
+                                                         
+        board[pos] = 0
+        going_back = True
+        pos = pos - 1
+        continue
+                                                   
+    copy = []
+    for k in range(81):
+        copy.append(board[k])
+    if check_everything(copy) == True:
+        pos = pos + 1
+
+                    
+
+if pos < 0:
+    print("no solution found :(")
+else:
+    row1 = str(board[0]) + str(board[1]) + str(board[2]) + str(board[3]) + str(board[4]) + str(board[5]) + str(board[6]) + str(board[7]) + str(board[8])
+    row2 = str(board[9]) + str(board[10]) + str(board[11]) + str(board[12]) + str(board[13]) + str(board[14]) + str(board[15]) + str(board[16]) + str(board[17])
+    row3 = str(board[18]) + str(board[19]) + str(board[20]) + str(board[21]) + str(board[22]) + str(board[23]) + str(board[24]) + str(board[25]) + str(board[26])
+    row4 = str(board[27]) + str(board[28]) + str(board[29]) + str(board[30]) + str(board[31]) + str(board[32]) + str(board[33]) + str(board[34]) + str(board[35])
+    row5 = str(board[36]) + str(board[37]) + str(board[38]) + str(board[39]) + str(board[40]) + str(board[41]) + str(board[42]) + str(board[43]) + str(board[44])
+    row6 = str(board[45]) + str(board[46]) + str(board[47]) + str(board[48]) + str(board[49]) + str(board[50]) + str(board[51]) + str(board[52]) + str(board[53])
+    row7 = str(board[54]) + str(board[55]) + str(board[56]) + str(board[57]) + str(board[58]) + str(board[59]) + str(board[60]) + str(board[61]) + str(board[62])
+    row8 = str(board[63]) + str(board[64]) + str(board[65]) + str(board[66]) + str(board[67]) + str(board[68]) + str(board[69]) + str(board[70]) + str(board[71])
+    row9 = str(board[72]) + str(board[73]) + str(board[74]) + str(board[75]) + str(board[76]) + str(board[77]) + str(board[78]) + str(board[79]) + str(board[80])
+    print(row1 + " " + row2 + " " + row3 + " " + row4 + " " + row5 + " " + row6 + " " + row7 + " " + row8 + " " + row9)
